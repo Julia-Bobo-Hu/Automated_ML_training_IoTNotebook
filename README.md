@@ -11,7 +11,7 @@ It will demonstrate (1) how to setup the notebook as an IoT notebook, (2) how to
 
 ## Step 1: Unzip the input data csv file from "data" folder, "jh_demo_batch_ml_train_dataset.csv". 
 
-## Step 2: Go to AWS Sagemaker console, and choose "notebook instance", setup proper "SageMakerExecution" role, 
+## Step 2: Go to AWS Sagemaker console, and choose "notebook instance", setup proper "SageMakerExecution" role. 
 and choose a relatively large instance size, M5.4XLarge for this training job. 
 
 ## Step 3: Go to AWS IoT Analytics console, click on "Notebooks" tab, click on "Create" tab, select "Blank Notebook",
@@ -31,6 +31,8 @@ The wrapper class used SKLearn Pipeline as base class, and then pass flag indica
 (2) The impact of different feature engineering steps are summarized in the following figure:
 (3) After each training job, the accuracy of the training job and final training model as pkl file are dumped into a specific S3 bucket. 
 The Object key of these documents contains the date timestamp to allow data scientist to access and make suitable deployment decisions.
+
+![alt text](https://github.com/Julia-Bobo-Hu/Automated_ML_training_IoTNotebook/blob/master/images/feature_metrics.PNG?raw=true)
 
 ## Step 7: After successfully run the IoT notebook, click on the "Containerize" tab on the top of your IoT Notebook. 
 Please note, this step significantly reduce most painful steps listed in AWS IoTAnalytics documents to containerize the IoT Notebook.
