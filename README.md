@@ -33,6 +33,7 @@ The wrapper class used SKLearn Pipeline as base class, and then pass flag indica
 The Object key of these documents contains the date timestamp to allow data scientist to access and make suitable deployment decisions.
 
 ![alt text](https://github.com/Julia-Bobo-Hu/Automated_ML_training_IoTNotebook/blob/master/images/feature_metrics.PNG?raw=true)
+### Figure: Quantitative feature engineering performance
 
 ## Step 7: After successfully run the IoT notebook, click on the "Containerize" tab on the top of your IoT Notebook. 
 Please note, this step significantly reduce most painful steps listed in AWS IoTAnalytics documents to containerize the IoT Notebook.
@@ -62,6 +63,9 @@ You can try different Sciki Learn ML models, MXnet, and other deep learning fram
 This automated training job will be automatically triggered, ran and sent quantitative training results to S3 Bucket without adding other extra AWS services (such as Lambda function to send results back).
 
 There is also a notebook example to demonstrate autoML on this data. 
+![alt text](https://github.com/Julia-Bobo-Hu/Automated_ML_training_IoTNotebook/blob/master/images/Autogluon_model.PNG?raw=true)
+### Figure: Model zoo performance and inference latency from Autogluon
+
 The motivation is to improve the model performance by using AutoGluon framework to leverage the stacking of model zoo. From our limited experience, the AutoGluon can improve the model accuracy by another 10%. 
 Unfortunately, there is still dependancies conflict between AutoGluon and Containerized AWS Sagemaker notebook, and the AutoGluon model creation notebook cannot be containerized as IoTNotebook.   
 
